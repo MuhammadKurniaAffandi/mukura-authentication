@@ -1,0 +1,121 @@
+
+// Test Endpoint User
+
+// Create a User
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "Affandi",
+    "email": "affandi@gmail.com",
+    "password": "12345",
+    "confPassword": "12345",
+    "role": "admin"
+}
+
+###
+// Get All Users
+GET http://localhost:3001/users
+
+
+###
+// Get Single User
+GET http://localhost:3001/users/cb2fec14-87ea-4452-b6df-43dbe271656d
+
+
+###
+// Update a User
+PATCH http://localhost:3001/users/54e9f721-fa13-40a5-a71e-ef97a4d26fea
+Content-Type: application/json
+
+{
+    "name": "Affandi Updated",
+    "email": "affandi@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+
+###
+// Delete a User
+DELETE http://localhost:3001/users/54e9f721-fa13-40a5-a71e-ef97a4d26fea
+
+
+###
+// Login sebagai admin
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    
+    "email": "mukura@gmail.com",
+    "password": "12345"
+    
+}
+
+
+###
+// Login sebagai user
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    
+    "email": "john@gmail.com",
+    "password": "123456"
+    
+}
+
+
+###
+// Melihat user yang sedang login
+GET http://localhost:3001/me
+
+
+###
+// Logout
+DELETE http://localhost:3001/logout
+
+
+
+
+
+// Test Endpoint Product
+
+###
+// Membuat Product Baru
+POST http://localhost:3001/products
+Content-Type: application/json
+
+{
+    
+    "name": "Product 6",
+    "price": 923
+}
+
+###
+// Get All Products
+GET http://localhost:3001/products
+
+
+###
+// Get Single Product
+GET http://localhost:3001/products/a7063418-e4ae-4457-bb88-46efcf5d5103
+
+
+###
+// Update Product
+PATCH http://localhost:3001/products/4f784636-d9f9-4739-8b00-e050a6b83ff2
+Content-Type: application/json
+
+{
+    
+    "name": "Product Updated",
+    "price": 873
+}
+
+
+###
+// Delete Product
+DELETE http://localhost:3001/products/299f3e25-7d18-4c0c-97ba-756c5fc57608
